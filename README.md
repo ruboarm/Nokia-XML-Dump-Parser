@@ -4,7 +4,7 @@ Via the Parser it's possible to read Nokia Mobile network Dump file exported in 
 A sample XML file and needed raml20.dtd are included in the repository for test purposes.
 
 # Sample Usage
-```
+```C#
 // Open XML file from local PC
 var openFileDialog = new OpenFileDialog();
 var filename = openFileDialog.GetFileName();
