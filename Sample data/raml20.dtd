@@ -1,1 +1,40 @@
-
+<!ELEMENT raml (cmData+) >
+<!ATTLIST raml
+    version CDATA #FIXED "2.0"
+    xmlns CDATA #FIXED "raml20.xsd" >
+	<!ELEMENT cmData (header, managedObject*) >
+	<!ATTLIST cmData
+	type      CDATA #REQUIRED
+	scope     CDATA #IMPLIED
+	name      CDATA #IMPLIED
+	id        CDATA #IMPLIED
+	domain    CDATA #IMPLIED  >
+	<!ELEMENT header (log+) >
+	<!ELEMENT log (#PCDATA) >
+	<!ATTLIST log
+	dateTime  CDATA #REQUIRED
+	action    CDATA #REQUIRED
+	user      CDATA #IMPLIED
+	appInfo   CDATA #IMPLIED >
+	<!ELEMENT managedObject (defaults?, (p | list?)*) >
+	<!ATTLIST managedObject
+	class     CDATA #REQUIRED
+	version   CDATA #IMPLIED
+	operation CDATA #IMPLIED
+	distName  CDATA #IMPLIED
+	id        CDATA #IMPLIED
+	name      CDATA #IMPLIED
+	vendor    CDATA #IMPLIED
+	timeStamp CDATA #IMPLIED>
+	<!ELEMENT defaults EMPTY >
+	<!ATTLIST defaults
+	name      CDATA #REQUIRED
+	id        CDATA #IMPLIED
+	status    CDATA #IMPLIED >
+	<!ELEMENT list (p* , item*) >
+	<!ATTLIST list
+	name      CDATA #REQUIRED >
+	<!ELEMENT item (p*) >
+	<!ELEMENT p (#PCDATA) >
+	<!ATTLIST p
+	name      CDATA #IMPLIED >
