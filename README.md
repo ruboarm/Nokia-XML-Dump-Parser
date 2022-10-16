@@ -1,7 +1,8 @@
 # Nokia-XML-Dump-Parser
 Via the Parser it's possible to read Nokia Mobile network Dump file exported in XML format and make it possible to extract needed data and work with it.
 
-A sample XML file and needed raml20.dtd are included in the repository for test purposes.
+A sample XML file and needed raml20.dtd are included in the repository for test purposes.\
+**_Important: Both XML and DTD files must be in the same location._**
 
 # Sample Usage
 ```C#
